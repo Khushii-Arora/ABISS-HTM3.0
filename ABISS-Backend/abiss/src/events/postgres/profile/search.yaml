@@ -1,0 +1,14 @@
+/postgres/profile/search.http.post:
+  summary: Fetch multiple Profile
+  description: Fetch multiple Profile from database
+  fn: com.biz.postgres.profile.search
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+  responses:
+    content:
+      application/json:
+        schema:
+          type: array

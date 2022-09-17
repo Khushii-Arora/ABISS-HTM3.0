@@ -1,0 +1,15 @@
+/postgres/profile/:id.http.delete:
+  summary: Delete a Profile
+  description: Delete Profile from database
+  fn: com.biz.postgres.profile.delete
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object

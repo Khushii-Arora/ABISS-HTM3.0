@@ -1,0 +1,15 @@
+/postgres/post/:id.http.delete:
+  summary: Delete a Post
+  description: Delete Post from database
+  fn: com.biz.postgres.post.delete
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object

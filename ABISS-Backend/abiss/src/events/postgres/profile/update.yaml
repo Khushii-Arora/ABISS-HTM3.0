@@ -1,0 +1,27 @@
+/postgres/profile/:id.http.put:
+  summary: Update a Profile
+  description: Update Profile from database
+  fn: com.biz.postgres.profile.update
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            bio:
+              type: string
+            user:
+              $ref: '#/definitions/User'
+            userId:
+              type: integer
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object

@@ -1,0 +1,26 @@
+/abiss/user.http.post:
+  summary: Create a new User
+  description: Create User from database
+  fn: com.biz.abiss.user.create
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            email:
+              type: string
+              format: "email"
+            name:
+              type: string
+              nullable: true
+            role:
+              type: string
+              default: USER
+              enum:
+                - USER
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object

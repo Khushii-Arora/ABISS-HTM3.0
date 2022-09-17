@@ -1,0 +1,38 @@
+/postgres/post.http.post:
+  summary: Create a new Post
+  description: Create Post from database
+  fn: com.biz.postgres.post.create
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            createdAt:
+              type: string
+              format: date-time
+            title:
+              type: string
+            published:
+              type: boolean
+              default: false
+            author:
+              $ref: '#/definitions/User'
+            authorId:
+              type: integer
+            categories:
+              type: array
+              items:
+                type: object
+            slug:
+              type: string
+            body:
+              type: string
+            description:
+              type: string
+              nullable: true
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object

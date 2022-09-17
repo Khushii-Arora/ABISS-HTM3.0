@@ -1,0 +1,11 @@
+summary: Fetch User
+tasks:
+  - id: abiss_user_one
+    fn: com.gs.datastore
+    args:
+      datasource: abiss
+      data:
+        where:
+          id: <% parseInt(inputs.params.id) %>
+      config:
+        method: user.findUnique

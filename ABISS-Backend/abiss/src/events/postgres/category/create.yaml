@@ -1,0 +1,21 @@
+/postgres/category.http.post:
+  summary: Create a new Category
+  description: Create Category from database
+  fn: com.biz.postgres.category.create
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            name:
+              type: string
+            posts:
+              type: array
+              items:
+                type: object
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object

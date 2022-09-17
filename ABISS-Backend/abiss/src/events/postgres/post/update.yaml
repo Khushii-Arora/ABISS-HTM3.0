@@ -1,0 +1,44 @@
+/postgres/post/:id.http.put:
+  summary: Update a Post
+  description: Update Post from database
+  fn: com.biz.postgres.post.update
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            createdAt:
+              type: string
+              format: date-time
+            title:
+              type: string
+            published:
+              type: boolean
+              default: false
+            author:
+              $ref: '#/definitions/User'
+            authorId:
+              type: integer
+            categories:
+              type: array
+              items:
+                type: object
+            slug:
+              type: string
+            body:
+              type: string
+            description:
+              type: string
+              nullable: true
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object

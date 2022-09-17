@@ -1,0 +1,21 @@
+/postgres/profile.http.post:
+  summary: Create a new Profile
+  description: Create Profile from database
+  fn: com.biz.postgres.profile.create
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            bio:
+              type: string
+            user:
+              type: object
+            userId:
+              type: integer
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object

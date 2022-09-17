@@ -1,0 +1,9 @@
+summary: Fetch many User
+tasks:
+  - id: abiss_user_search
+    fn: com.gs.datastore
+    args:
+      datasource: abiss
+      data: <% inputs.body %>
+      config:
+        method: User.findMany

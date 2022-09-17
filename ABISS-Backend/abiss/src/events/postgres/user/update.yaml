@@ -1,0 +1,39 @@
+/postgres/user/:id.http.put:
+  summary: Update a User
+  description: Update User from database
+  fn: com.biz.postgres.user.update
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            email:
+              type: string
+            name:
+              type: string
+              nullable: true
+            role:
+              type: string
+              default: USER
+              enum:
+                - USER
+                - ADMIN
+            posts:
+              type: array
+              items:
+                type: object
+            profile:
+              type: object
+              nullable: true
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object

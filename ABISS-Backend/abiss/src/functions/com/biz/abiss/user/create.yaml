@@ -1,0 +1,16 @@
+summary: Create User
+tasks:
+  - id: abiss_user_create
+    fn: com.gs.datastore
+    args:
+      datasource: abiss
+      data:
+        data: <% inputs.body %>
+      config:
+        method: user.create
+  - id: abiss_user_transform
+    fn: com.gs.transform
+    args: |
+      <coffee% {
+        [outputs.abiss_user_create.data.id]: outputs.abiss_user_create
+      } %>

@@ -1,0 +1,14 @@
+/postgres/post/search.http.post:
+  summary: Fetch multiple Post
+  description: Fetch multiple Post from database
+  fn: com.biz.postgres.post.search
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+  responses:
+    content:
+      application/json:
+        schema:
+          type: array

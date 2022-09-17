@@ -1,0 +1,1 @@
+{"projectName":"abiss","mongodb":false,"postgresql":true,"postgresDbName":"abiss","kafka":false,"elasticsearch":false,"redis":false,"svcPort":3000,"postgresDbPort":5432}

@@ -1,0 +1,14 @@
+/postgres/user/search.http.post:
+  summary: Fetch multiple User
+  description: Fetch multiple User from database
+  fn: com.biz.postgres.user.search
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+  responses:
+    content:
+      application/json:
+        schema:
+          type: array
