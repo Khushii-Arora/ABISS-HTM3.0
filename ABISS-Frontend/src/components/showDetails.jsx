@@ -55,20 +55,20 @@ class ShowDetails extends Component {
             <div key={i} className="container">
             <div className="row" style={{margin:20}}>
 
-            <div className="row">
               <div
                 style={{
-                  paddingTop:30,
+                  padding:30,
                   alignItems: 'center',
                   border: 'solid #3dfffc',
                   backgroundColor:"#001e31",
-                  color:"#3dfffc"
+                  color:"#3dfffc",
+                  marginTop:'30px'
                 }}
               >
                 {/* matching face in database: person's records are found*/}
                   {!!match && match[i] && match[i]._label !== 'unknown' ? (
                     
-                      <p>
+                      <p style={{fontSize:'15px'}}>
 
                         {!!visitors.map(visitor =>(JSON_PROFILE[visitor].rollno)===match[i]._label ?
                         (permissionStatus=JSON_PROFILE[visitor].permission,
@@ -82,11 +82,15 @@ class ShowDetails extends Component {
                             
                           Permission Status: {permissionStatus}
                           <br/>
+                          <br/>
                           Roll Number: {idnumber}
+                          <br/>
                           <br/>
                           Name: {personName}
                           <br/>
+                          <br/>
                           Phone Number: {personPhone}
+                          <br/>
                           <br/>
                           Email ID: {personEmail}
                       </p>
@@ -108,8 +112,6 @@ class ShowDetails extends Component {
                     ) : null}
               </div>
                
-              
-              </div>
               </div>   
             </div>
   

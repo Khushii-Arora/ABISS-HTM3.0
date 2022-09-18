@@ -20,6 +20,8 @@ class PermissionCheck extends Component {
     this.getDescription(newProps);
   }
 
+  
+
   //getting 128 number facial feature discriptor from webcam input
   getDescription = async (props = this.props) => {
     const { fullDiscription, faceMatcher} = props;
@@ -70,8 +72,7 @@ class PermissionCheck extends Component {
         submessage:'Convert the following Base64-encoded image of the guest person to png using: https://base64.guru/converter/decode/image/png',
         screenshot: this.props.screenshot
       };
-  
-
+      
 
     //send alert email messages
     const sendMailAlert=(idnumber,permissionStatus)=>{
