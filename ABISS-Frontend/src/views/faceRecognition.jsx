@@ -9,6 +9,7 @@ import {
 import DrawBox from '../components/drawBox';
 import ShowDescriptors from '../components/showDescriptors';
 import { JSON_PROFILE } from '../common/profile';
+import ShowDetails from '../components/showDetails';
 
 const MaxWidth = 600;
 const welcome = require('../img/login.svg');
@@ -157,16 +158,22 @@ class FaceRecognition extends Component {
         <h3>Processing...</h3>
       </div>
     );
-    // console.log(fullDiscription);
+    console.log(faceMatcher);
 
     return (
       <div style={{display: 'flex',flexDirection: 'column',alignItems: 'center'}}>
         {status}
+        <div className='row'> 
+
+
+
+{/* upload photo here to check database*/}
+        <div className='col-8'>
         <div style={{position: 'relative',width: WIDTH, height: HEIGHT}}>
           {!!imageURL ? (
             <div style={{position: 'relative'}}>
               <div style={{ position: 'absolute' }}>
-                <img style={{ width: WIDTH }} src={imageURL} alt="imageURL" />
+                <img style={{ width: WIDTH}} src={imageURL} alt="imageURL" />
               </div>
               
               {!!fullDiscription ? (
@@ -220,6 +227,23 @@ class FaceRecognition extends Component {
             <label>Show Descriptors</label>
           </div>
           {!!showDescriptors ? <ShowDescriptors fullDiscription={fullDiscription} /> : null}
+        </div>
+        </div>
+
+        
+{/* show full details here */}
+        {!!fullDiscription ? (
+        <div className='col-4'>
+              <ShowDetails
+                fullDiscription={fullDiscription}
+                faceMatcher={faceMatcher}
+              />
+        </div>  
+        ) : <p style={{color:'white'}}>"loading permission status..."</p>}
+        
+        
+
+
         </div>
       </div>
       

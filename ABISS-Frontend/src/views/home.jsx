@@ -16,7 +16,7 @@ export default class Home extends Component {
       >
       
         <img src={require('../img/logo.svg')} alt='logo' style={{height:'20vh',width:'20wh',padding:'10px'}} />
-        <h2 style={{textDecoration: 'underline'}}>ABISS: Advanced Biometric Identity Security System</h2>
+        <h2 style={{textDecoration: 'underline'}}>ABISS: Advanced Biometric Identification Security System</h2>
 
         <div className="row"
           style={{

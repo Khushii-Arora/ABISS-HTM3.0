@@ -104,6 +104,7 @@ class CameraFaceDetect extends Component {
       >
         <p style={{color:'white'}}>Camera: {camera}</p>
         
+        {/* If person is detected by camera */}
               {!!fullDiscription ? (
               <PermissionCheck
                 fullDiscription={fullDiscription}
