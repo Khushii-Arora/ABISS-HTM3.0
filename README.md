@@ -6,7 +6,7 @@ Open Innovation
 
 ## 📚 Sponsorship Tracks
 - **All Girls Team**
-- ** GoDaddy Registry: ABISS Security Solutions**
+- **GoDaddy Registry: ABISS Security Solutions**
 (Note: we were not able to avail GoDaddy domain name because coupon limit was reached, therefore mentioning our domain name here as told by the organising team.)
 - **juicebox**
 - **Godspeed**
@@ -40,6 +40,7 @@ This will run app in development mode.
  
 - **Works on both Phones and Computers**
 - **Contactless Identify Verification**
+- **Can retrieve all data for a person belonging to our databse using face recognision**
 - **Detects Multiple Faces at once.**
 - **Security Alert Notification System via Email.**
 - **People are Categoried into Categories to Counter All Kind of Situations.**
