@@ -1,15 +1,23 @@
 # 🛡️ABISS: Advanced Biometric Identification Security System
-<img src="https://github.com/Khushii-Arora/ABISS-MS-Engage22/blob/main/src/img/logo3.png" />
+<img src="https://github.com/Khushii-Arora/ABISS-HTM3.0/blob/main/ABISS-Frontend/src/img/logo3.png" />
 
-### 📚 Selected Problem Statement
-Develop a browser-based application or a native mobile application to demonstrate application of Face Recognition technology.
+### 📚 Selected Theme
+Open Innovation
+
+## 📚 Sponsorship Tracks
+- **All Girls Team**
+- ** GoDaddy Registry: ABISS Security Solutions**
+(Note: we were not able to avail GoDaddy domain name because coupon limit was reached, therefore mentioning our domain name here as told by the organising team.)
+- **juicebox**
+- **Godspeed**
+
 
 ## How to Use
 
 **clone the repository:()**
 
 ```bash
-git clone https://github.com/Khushii-Arora/ABISS-MS-Engage22.git
+git clone https://github.com/Khushii-Arora/ABISS-HTM3.0.git
 ```
 
 **In the project directory, you can run:**
@@ -58,13 +66,15 @@ This will run app in development mode.
 
 The JSON profile contains visitors' nickname and array of 5-10 facial feature vector generate per visitor from sample photos. We don't store sample photos in the app to save processing time and optimize application size. You can create new descriptor (feature vector) by uploading photo to the app and check `Show Descriptors` to see the descriptor. If there're multiple faces detected in one photo, app will show all descriptors.
 
-[JSON File](https://github.com/Khushii-Arora/ABISS-MS-Engage22/blob/main/src/database/face_database.json) Format:
+[JSON File](https://github.com/Khushii-Arora/ABISS-HTM3.0/blob/main/ABISS-Frontend/src/database/face_database.json) Format:
 
 ```text
 {
   "id1": {
 	"rollno":id1
         "name": "nickname",
+	"phone": "phone number",
+	"email": "email id",
 	"permission": permission status,
       "descriptors": [
       [Facial_Feature_Vector],...
@@ -73,6 +83,8 @@ The JSON profile contains visitors' nickname and array of 5-10 facial feature ve
   "id2": {
 	"rollno":id2
         "name": "nickname",
+	"phone": "phone number",
+	"email": "email id",
 	"permission": permission status,
     "descriptors": [
       [Facial_Feature_Vector],...
